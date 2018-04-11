@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="StoreImg/messages_5122x.png" />
+  <title>Chat Web</title>
+
+  <script src="socket.io/socket.io.js"></script>
+  <!-- Bootstrap core CSS -->
+  <link href="Framework/Css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Custom styles for this template -->
+  <link href="MainStyle/Sign-in.css" rel="stylesheet" />
+  <link type="text/css" href="./MainStyle/Chat.css" rel="stylesheet" />
+  <!-- Font awesome  -->
+  <link href="Framework/font-awesome/css/font-awesome.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="row d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
+      <img src="StoreImg/messages_5122x.png" style="height:100%; width:70px;padding-right:10px" />
+      <h5 class="my-0 mr-md-auto font-weight-normal">Chat Real Time Web</h5>
+      <a class="btn btn-outline-primary" id="logout" href="#">Log out</a>
+    </div>
+    <div class="blue-background row"></div>
+    <div class="wrap">
+      <section class="left">
+        <div class="nameUser">
+          <h5 id="UserName" style="text-align:center; padding-top:6%"><i class="icon icon-bars"></i>Name User</h5>
+        </div>
+        <div class="wrap-search">
+          <div class="search">
+            <i class="icon icon-search" style="margin-top:5px" aria-hidden="true"></i>
+            <input type="text" class="input-search" placeholder="Search name ...">
+          </div>
+        </div>
+        <div class="contact-list">
+
+        </div>
+      </section>
+
+
+      <section class="right">
+        <div class="chat-head">
+          <h5 style="text-align:center; padding-top:20px; color:white"><i class="icon icon-bars"></i>Conversation</h5>
+        </div>
+        <div class="wrap-chat">
+          <div class="chat">
+
+
+          </div>
+        </div>
+
+        <div class="wrap-message">
+          <i class="icon icon-smile icon-large" accesskey="" aria-hidden="true" style="font-size:25px; color:#70B0ED"></i>
+
+          <div class="input-group message">
+            <input type="text" class="input-message" id='content-message' placeholder="Chat Something ...">
+            <span class="input-group-btn">
+                            <button class="btn btn-sm" style="height:45px;color:white;background-color:#70B0ED" id="btn-chat">
+                                Send
+                            </button>
+                        </span>
+          </div>
+          <i class="icon icon-microphone icon-large" accesskey="" aria-hidden="true" style="font-size:25px;color:#70B0ED"></i>
+
+        </div>
+
+      </section>
+    </div>
+  </div>
+
+  <form class="form-signin text-center hide" style="display:none">
+    <img class="mb-4" src="StoreImg/messages_5122x.png" alt="" width="150" height="150">
+    <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+    <input type="text" id="inputEmail" class="form-control" placeholder="User Name" required autofocus>
+    <br />
+    <button class="btn btn-lg btn-primary btn-block" id="Signin" type="button">Sign in</button>
+    <p class="mt-5 mb-3 text-muted">&copy; 2017-2018</p>
+  </form>
+
+
+  <!-- Bootstrap core JavaScript
+      ================================================== -->
+  <!-- Frame work js -->
+  <script src="Framework/Js/jquery-3.2.1.min.js"></script>
+  <script src="Framework/Js/bootstrap.js"></script>
+
+  </script>
+
+  <!-- Main js -->
+  <script src="Chat.js"></script>
+</body>
+
+</html>
