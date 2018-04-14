@@ -9,17 +9,31 @@ body {
   -ms-flex-pack: center;
   -webkit-box-align: center;
   -webkit-box-pack: center;
-  margin: auto;
 }
 
 .form-signin {
   width: 100%;
-  max-width: 330px;
+  max-width: 400px;
   padding: 15px;
 }
 
-.form-signin .checkbox {
-  font-weight: 400;
+.form-signin .card {
+  border-color: white;
+  border-top-color: white;
+  border-right-color: white;
+  border-bottom-color: white;
+  border-left-color: white;
+  box-shadow: 0 0 40px rgba(0, 0, 0, .05);
+}
+
+.form-signin .card-title {
+  margin-bottom: 30px;
+}
+
+.form-signin .card-body {
+  flex: 1 1 auto;
+  padding: 2rem;
+  font-size: 14px;
 }
 
 .form-signin .form-control {

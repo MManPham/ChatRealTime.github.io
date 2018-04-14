@@ -23,14 +23,18 @@
   <div class="container-fluid">
     <div class="row d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
       <img src="StoreImg/messages_5122x.png" style="height:100%; width:70px;padding-right:10px" />
-      <h5 class="my-0 mr-md-auto font-weight-normal">Chat Real Time Web</h5>
+      <h2 class="my-0 mr-md-auto font-weight-normal">Web Chat</h5>
       <a class="btn btn-outline-primary" id="logout" href="#">Log out</a>
     </div>
     <div class="blue-background row"></div>
     <div class="wrap">
       <section class="left">
-        <div class="nameUser">
-          <h5 id="UserName" style="text-align:center; padding-top:6%"><i class="icon icon-bars"></i>Name User</h5>
+        <div class="nameUser" >
+
+          <h5 id="UserName" class="card-title" style="text-align:center; padding: 15px 0 "><i class="icons icon-user " style="color:white; font-size: 25px;">
+
+          </i> <span style="font-size:25px"></span>
+        </h5>
         </div>
         <div class="wrap-search">
           <div class="search">
@@ -46,9 +50,12 @@
 
       <section class="right">
         <div class="chat-head">
-          <h5 style="text-align:center; padding-top:20px; color:white"><i class="icon icon-bars"></i>Conversation</h5>
+
+          <h5 style="text-align:center; padding-top:15px; color:white">  <span class="icons  icon-comments-alt icon-large " style="color:white;    font-size: 25px;"></span>
+            Conversation</h5>
         </div>
-        <div class="wrap-chat">
+
+          <div class="wrap-chat">
           <div class="chat">
 
 
@@ -74,14 +81,53 @@
     </div>
   </div>
 
-  <form class="form-signin text-center hide" style="display:none">
-    <img class="mb-4" src="StoreImg/messages_5122x.png" alt="" width="150" height="150">
-    <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
-    <input type="text" id="inputEmail" class="form-control" placeholder="User Name" required autofocus>
-    <br />
-    <button class="btn btn-lg btn-primary btn-block" id="Signin" type="button">Sign in</button>
-    <p class="mt-5 mb-3 text-muted">&copy; 2017-2018</p>
-  </form>
+<div class="form-signin  card-wrapper" style="display:none">
+  <div class="brand" style="width:100%; text-align:center">
+    <img class="mb-4" src="StoreImg/messages_5122x.png" alt="" width="100" height="100">
+  </div>
+  <div class="card fat">
+    <div class="card-body">
+      <h4 class="card-title">Login</h4>
+      <form class="" action="index.html" method="post">
+        <div class="form-group">
+          <label for="Name">Your Name</label>
+          <input id="inputName" type="text" class="form-control" name="Name" value="" required autofocus>
+        </div>
+        <div class="form-group">
+          <label for="password" style="width:100%">Password
+            <a href="/forgotPw"   class="float-right">
+              Forgot Password?
+            </a>
+          </label>
+          <input id="password" type="password" class="form-control" name="password" required data-eye>
+        </div>
+
+        <div class="form-group">
+          <label>
+            <input type="checkbox" name="remember"> Remember Me
+          </label>
+        </div>
+
+        <div class="form-group no-margin">
+          <button id="Signin" type="submit" class="btn btn-primary btn-block">
+            Login
+          </button>
+        </div>
+        <div class="margin-top20 text-center">
+          Don't have an account? <a href="/register">Create One</a>
+        </div>
+
+
+
+
+      </form>
+
+    </div>
+  </div>
+  <p class="mt-5 mb-3 text-muted text-center">&copy; 2017-2018</p>
+
+
+</div>
 
 
   <!-- Bootstrap core JavaScript
@@ -93,7 +139,7 @@
   </script>
 
   <!-- Main js -->
-  <script src="Chat.js"></script>
+  <script src="Js/Chat.js"></script>
 </body>
 
 </html>
