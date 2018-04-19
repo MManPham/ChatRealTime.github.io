@@ -11,12 +11,25 @@ $(document).ready(function () {
     $('.container-fluid').hide();
 
     $('#Signin').click(function () {
-        socket.emit("clientSendUserName", $('#inputName').val());
-        $('#inputName').val('');
+        profile.email =  $('#inputEmail').val();
+        profile.password =  $('#password').val();
+
+        socket.emit("clientSendUserName", profile);
+        $('#inputEmail').val('');
+        $('#password').val('');
 
     });
 
-    $('#inputName').keypress(function (e) {
+    $('#password').keypress(function (e) {
+
+        if (e.which == 13) {
+            $('#Signin').click();
+            $('#Signin').click();
+            event.preventDefault();
+        }
+    })
+    $('#inputEmail').keypress(function (e) {
+
         if (e.which == 13) {
             $('#Signin').click();
             $('#Signin').click();
@@ -27,7 +40,10 @@ $(document).ready(function () {
 
 
 
+
+
     $('#logout').click(function () {
+
         socket.emit("logoutUserName", profile.Name);
         socket.emit("logoutUserName");
 
@@ -108,9 +124,12 @@ $(document).ready(function () {
 var socket = io("http://localhost:3000/");
 
 //Fail
-socket.on("clientSendUserNameFail", function () {
-    alert("has a user use this name");
-
+socket.on("clientSendUserNameFail", function (data) {
+  if(data===0)
+    alert("Something  wrong with your email or password");
+  else {
+    alert('Has another use this account')
+  }
 });
 
 //Success
